@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <MGSFragaria/MGSFragariaPreferences.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
+    
+    [[NSUserDefaults standardUserDefaults] setValue:[NSArchiver archivedDataWithRootObject:[NSFont fontWithName:@"Menlo" size:14]] forKey:MGSFragariaPrefsTextFont];
+
     self.window = [NSApplication sharedApplication].windows[0];
 }
 

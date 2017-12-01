@@ -17,18 +17,13 @@
 
 @implementation ZZPropertyEditViewController
 
-- (void)loadView
-{
-    [super loadView];
-    
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
     [self.collectionView setWantsLayer:YES];
     [self.collectionView.layer setBackgroundColor:[NSColor windowBackgroundColor].CGColor];
     
     [self registerViewsForCollectionView:self.collectionView];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadData) name:NOTI_SETTING_EDIT object:nil];
 }

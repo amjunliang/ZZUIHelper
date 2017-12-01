@@ -24,19 +24,27 @@
 
 - (void)setObject:(ZZUIView *)object
 {
-    _object = object;
-    self.data = object.layouts;
     
-    NSMutableArray *otherObjects = [[NSMutableArray alloc] init];
-    NSArray *respArray = [ZZClassHelper sharedInstance].curClass.childViewsArray;
-    [otherObjects addObject:@""];
-    [otherObjects addObject:@"superView"];
-    for (ZZUIResponder *resp in respArray) {
-        [otherObjects addObject:resp.propertyName];
+    if ([ZZUIHelperConfig sharedInstance].layoutLibrary == ZZUIHelperLayoutLibraryMasonry && object && [[object class] isSubclassOfClass:[ZZUIResponder class]]) {
+        
+        _object = object;
+        self.data = object.layouts;
+        
+        NSMutableArray *otherObjects = [[NSMutableArray alloc] init];
+        NSArray *respArray = [ZZClassHelper sharedInstance].curClass.childViewsArray;
+        [otherObjects addObject:@""];
+        [otherObjects addObject:@"superView"];
+        for (ZZUIResponder *resp in respArray) {
+            [otherObjects addObject:resp.propertyName];
+        }
+        self.otherObjects = otherObjects;
+        
+        [self.tableView reloadData];
+
+    }else{
+        self.data = nil;
+        [self.tableView reloadData];
     }
-    self.otherObjects = otherObjects;
-    
-    [self.tableView reloadData];
 }
 
 #pragma mark - # Delegates

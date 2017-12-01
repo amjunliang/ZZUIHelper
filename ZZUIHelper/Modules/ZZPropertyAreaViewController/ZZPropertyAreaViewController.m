@@ -42,17 +42,9 @@
     ZZNSObject *object = notification.object;
 
     [self.editVC setObject:object];
-    
-    if ([ZZUIHelperConfig sharedInstance].layoutLibrary == ZZUIHelperLayoutLibraryMasonry && object && [[object class] isSubclassOfClass:[ZZUIResponder class]]) {
-        [self.layoutVC setObject:(ZZUIView *)object];
-        if (![self.tabViewItems containsObject:self.layoutVCItem]) {
-            [self addTabViewItem:self.layoutVCItem];
-        }
-        return;
-    }
-    
-    if ([self.tabViewItems containsObject:self.layoutVCItem]) {
-        [self removeTabViewItem:self.layoutVCItem];
+    [self.layoutVC setObject:(ZZUIView *)object];
+    if (![self.tabViewItems containsObject:self.layoutVCItem]) {
+        [self addTabViewItem:self.layoutVCItem];
     }
 }
 

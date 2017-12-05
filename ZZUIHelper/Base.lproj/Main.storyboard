@@ -874,10 +874,11 @@
         <!--代码区-->
         <scene sceneID="bJk-8j-oru">
             <objects>
-                <tabViewController title="代码区" selectedTabViewItemIndex="0" id="XFB-eZ-pNZ" customClass="ZZCodeAreaViewController" sceneMemberID="viewController">
+                <tabViewController title="代码区" selectedTabViewItemIndex="2" id="XFB-eZ-pNZ" customClass="ZZCodeAreaViewController" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="2OG-XA-wYW"/>
                         <tabViewItem identifier="" id="MGP-jM-uiF"/>
+                        <tabViewItem id="Jya-9C-Ezp"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="eL7-uG-M5U">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -892,6 +893,7 @@
                         <outlet property="tabView" destination="eL7-uG-M5U" id="DUe-Iq-CL5"/>
                         <segue destination="9g8-CF-6vJ" kind="relationship" relationship="tabItems" id="h9n-Mn-ycs"/>
                         <segue destination="1IL-bM-qDb" kind="relationship" relationship="tabItems" id="Xre-pm-9zc"/>
+                        <segue destination="cTV-II-h99" kind="relationship" relationship="tabItems" id="rYr-UO-d0c"/>
                     </connections>
                 </tabViewController>
                 <customObject id="363-fr-Il8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1159,7 +1161,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1590" y="473"/>
+            <point key="canvasLocation" x="1433" y="758"/>
         </scene>
         <!--Class.h-->
         <scene sceneID="nEi-0E-6Dh">
@@ -1185,7 +1187,7 @@
                 </viewController>
                 <customObject id="Pqw-eh-QxU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824" y="314"/>
+            <point key="canvasLocation" x="1855" y="382"/>
         </scene>
         <!--控件区-->
         <scene sceneID="OeF-qQ-A1Z">
@@ -2032,6 +2034,31 @@
                 <customObject id="WOr-bF-yzg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="390" y="1178"/>
+        </scene>
+        <!--CodeSnippets-->
+        <scene sceneID="BBo-pV-RRp">
+            <objects>
+                <viewController title="CodeSnippets" id="dOO-Tg-mt7" sceneMemberID="viewController">
+                    <view key="view" id="b6m-Io-CuX">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="HJb-Ip-J1d" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--CodeSnippets-->
+        <scene sceneID="2ni-bn-m3m">
+            <objects>
+                <viewController title="CodeSnippets" id="cTV-II-h99" customClass="ZZCodeSnippetsViewController" sceneMemberID="viewController">
+                    <view key="view" id="ON8-6C-YVy">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="kxv-3k-ddH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1600" y="471"/>
         </scene>
     </scenes>
     <resources>

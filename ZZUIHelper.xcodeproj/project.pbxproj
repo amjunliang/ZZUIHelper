@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B4345521FD6F40D000AFEA8 /* ZZCodeSnippetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4345511FD6F40D000AFEA8 /* ZZCodeSnippetsViewController.m */; };
+		2B4345541FD6F76F000AFEA8 /* helper.snippets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4345531FD6F76F000AFEA8 /* helper.snippets */; };
 		C2154E4A1E710C5100E3D18C /* ZZSettingItemsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2154E481E710C5100E3D18C /* ZZSettingItemsAddViewController.m */; };
 		C2154E4B1E710C5100E3D18C /* ZZSettingItemsAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2154E491E710C5100E3D18C /* ZZSettingItemsAddViewController.xib */; };
 		C21789BC1E55D64500AF8BEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C21789BB1E55D64500AF8BEE /* AppDelegate.m */; };
@@ -177,6 +179,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B4345501FD6F40D000AFEA8 /* ZZCodeSnippetsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCodeSnippetsViewController.h; sourceTree = "<group>"; };
+		2B4345511FD6F40D000AFEA8 /* ZZCodeSnippetsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCodeSnippetsViewController.m; sourceTree = "<group>"; };
+		2B4345531FD6F76F000AFEA8 /* helper.snippets */ = {isa = PBXFileReference; lastKnownFileType = text; path = helper.snippets; sourceTree = "<group>"; };
 		C2154E471E710C5100E3D18C /* ZZSettingItemsAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZSettingItemsAddViewController.h; sourceTree = "<group>"; };
 		C2154E481E710C5100E3D18C /* ZZSettingItemsAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZSettingItemsAddViewController.m; sourceTree = "<group>"; };
 		C2154E491E710C5100E3D18C /* ZZSettingItemsAddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZSettingItemsAddViewController.xib; sourceTree = "<group>"; };
@@ -790,6 +795,8 @@
 		C2223A081E5875DA002CB428 /* ZZCodeAreaViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2B4345501FD6F40D000AFEA8 /* ZZCodeSnippetsViewController.h */,
+				2B4345511FD6F40D000AFEA8 /* ZZCodeSnippetsViewController.m */,
 				C2B3F5FB1E62FB18000E42CE /* ZZCodeHFileViewController */,
 				C2B3F5FD1E62FB18000E42CE /* ZZCodeMFileViewController */,
 				C2223A091E5875F8002CB428 /* ZZCodeAreaViewController.h */,
@@ -842,6 +849,7 @@
 			isa = PBXGroup;
 			children = (
 				C25066F11E78F5BA007F669C /* Images */,
+				2B4345531FD6F76F000AFEA8 /* helper.snippets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1428,6 +1436,7 @@
 				C25066F31E78F5D1007F669C /* Assets.xcassets in Resources */,
 				C2D6CA231E5BE12700EEF76B /* LICENSE in Resources */,
 				C2AEFB3B1E75A10100972320 /* ZZPropertyLineCell.xib in Resources */,
+				2B4345541FD6F76F000AFEA8 /* helper.snippets in Resources */,
 				C2A10CB21E5AEF0B000960D9 /* ZZNewPropertyViewController.xib in Resources */,
 				C2AC3AAE1E78F79D006FB8C3 /* UITabBarItem.tiff in Resources */,
 				C2AC3AAA1E78F79D006FB8C3 /* UIStepper.tiff in Resources */,
@@ -1552,6 +1561,7 @@
 				C2D738BC1E74F8ED00344E5F /* ZZPropertyBoolCell.m in Sources */,
 				C2AEFB3F1E75AA3B00972320 /* ZZUIActivityIndicatorView.m in Sources */,
 				C21DDF2C1E700648000BCD9C /* ZZGeneralSettingViewController.m in Sources */,
+				2B4345521FD6F40D000AFEA8 /* ZZCodeSnippetsViewController.m in Sources */,
 				C2A10CB11E5AEF0B000960D9 /* ZZNewPropertyViewController.m in Sources */,
 				C21DDECF1E6FEFF6000BCD9C /* ZZEvent.m in Sources */,
 				C2D6CA221E5BE12700EEF76B /* NSString+MMBJ.m in Sources */,

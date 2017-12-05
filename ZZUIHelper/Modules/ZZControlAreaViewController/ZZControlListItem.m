@@ -32,9 +32,9 @@
     }];
     
     [self.controlImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(12);
-        make.bottom.mas_equalTo(-12);
-        make.left.mas_equalTo(13);
+        make.top.mas_equalTo(1);
+        make.bottom.mas_equalTo(-1);
+        make.left.mas_equalTo(12);
         make.width.mas_equalTo(self.controlImageView.mas_height);
     }];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {

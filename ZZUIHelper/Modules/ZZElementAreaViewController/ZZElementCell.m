@@ -21,6 +21,11 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    self.classNameLabel.font =
+    self.remarksLabel.font =
+    self.propertyNameLabel.font =
+    [NSFont systemFontOfSize:16];
+    
 //    [self setWantsLayer:YES];
 //    [self.layer setBackgroundColor:[NSColor windowBackgroundColor].CGColor];
     [self.classNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {

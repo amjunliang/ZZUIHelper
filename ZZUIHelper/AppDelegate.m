@@ -20,7 +20,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
     
-    [[NSUserDefaults standardUserDefaults] setValue:[NSArchiver archivedDataWithRootObject:[NSFont fontWithName:@"Menlo" size:14]] forKey:MGSFragariaPrefsTextFont];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSArchiver archivedDataWithRootObject:[NSFont fontWithName:@"Menlo" size:15]] forKey:MGSFragariaPrefsTextFont];
 
     self.window = [NSApplication sharedApplication].windows[0];
 }

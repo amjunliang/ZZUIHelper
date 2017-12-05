@@ -31,6 +31,7 @@
 {
     [super viewDidLoad];
     
+    self.listType = 1;
     NSCollectionViewFlowLayout *layout = self.collectionView.collectionViewLayout;
     [layout setMinimumLineSpacing:0];
     [layout setMinimumInteritemSpacing:0];
@@ -101,7 +102,7 @@
         CGFloat height = width * 20 / 21;
         return CGSizeMake(width, height);
     }
-    return CGSizeMake(collectionView.frame.size.width, 60);
+    return CGSizeMake(collectionView.frame.size.width, 30);
 }
 
 //MARK: NSSearchFieldDelegate

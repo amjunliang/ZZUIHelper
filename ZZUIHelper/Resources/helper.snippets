@@ -1,144 +1,190 @@
-//
-//  ZZCodeSnippetsViewController.m
-//  ZZUIHelper
-//
-//  Created by 马俊良 on 2017/12/5.
-//  Copyright © 2017年 李伯坤. All rights reserved.
-//
 
-#import "ZZCodeSnippetsViewController.h"
-#import <MGSFragaria/MGSFragaria.h>
+nsobject
+	uiresponder
+		uiview
+			uiscrollView
+				uitextView
+				uitableView
+				uicollectionView
+			UILabel
+			uiprogressview
+			uiimageview
+			UIControl
+				uitextfield
+				uibutton
+				uislider
+				uiswitch
+				
+//*******************************************************************
+_imageView = [[UIImageView alloc] init];
+[_imageView setImage:[UIImage imageNamed:@"image"]];
+[_imageView setHighlightedImage:[UIImage imageNamed:@"image"]];
+[_imageView setHighlighted:YES];
 
-@interface ZZCodeSnippetsViewController ()
-@property (nonatomic, strong) MGSFragaria *fragaria;
-@end
+//*******************************************************************
+_label = [[UILabel alloc] init];
+[_label setText:@"test"];
+[_label setFont:[UIFont systemFontOfSize:12]];
+[_label setTextColor:[UIColor zzRedColor]];
+[_label setTextAlignment:NSTextAlignmentCenter];
+[_label setNumberOfLines:10];
+[_label setLineBreakMode:NSLineBreakByClipping];
 
-@implementation ZZCodeSnippetsViewController
+//*******************************************************************
+_button = [[UIButton alloc] init];
+[_button addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
+[_button setTitle:@"test" forState:UIControlStateNormal];
+[_button setTitleColor:[UIColor zzRedColorWithAlpha] forState:UIControlStateNormal];
+[_button setImage:[UIImage imageNamed:@"image"] forState:UIControlStateNormal];
+[_button setBackgroundImage:[UIImage imageNamed:@"image"] forState:UIControlStateNormal];
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
-    [self.fragaria embedInView:self.view];
-    NSString *snippetsPath =  [[NSBundle mainBundle]pathForResource:@"helper.snippets" ofType:nil];
-    NSString *snippetsStr = [NSString stringWithContentsOfFile:snippetsPath encoding:NSUTF8StringEncoding error:nil];
-    [self.fragaria setString:snippetsStr];
-    self.fragaria.textView.editable = NO;
-}
-#pragma mark - # Getter
-- (MGSFragaria *)fragaria
-{
-    if (!_fragaria) {
-        _fragaria = [[MGSFragaria alloc] init];
-        [_fragaria setObject:@"Objective-C" forKey:MGSFOSyntaxDefinitionName];
-    }
-    return _fragaria;
-}
-@end
-//
-//  ZZCodeSnippetsViewController.m
-//  ZZUIHelper
-//
-//  Created by 马俊良 on 2017/12/5.
-//  Copyright © 2017年 李伯坤. All rights reserved.
-//
+//*******************************************************************
+_textView = [[UITextView alloc] init];
+[_textView setDelegate:self];
+[_textView setText:@"test"];
+[_textView setFont:[UIFont 12]];
+[_textView setTextColor:[UIColor zzRedColor]];
+[_textView setTextAlignment:NSTextAlignmentCenter];
+[_textView setEditable:NO];
+[_textView setSelectable:YES];
+[_textView setBorderStyle:UITextBorderStyleLine];
+[_textView setClearButtonMode:UITextFieldViewModeWhileEditing];
+[_textView setClearsOnBeginEditing:YES];
+[_textView setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
+[_textView setReturnKeyType:UIReturnKeyJoin];
+[_textView setKeyboardAppearance:UIKeyboardAppearanceLight];
+[_textView setEnablesReturnKeyAutomatically:YES];
+[_textView setSecureTextEntry:YES];
 
-#import "ZZCodeSnippetsViewController.h"
-#import <MGSFragaria/MGSFragaria.h>
+//*******************************************************************
+_textField = [[UITextField alloc] init];
+[_textField setText:@"test"];
+[_textField setPlaceholder:@"test"];
+[_textField setFont:[UIFont 12]];
+[_textField setTextColor:[UIColor clearColor]];
+[_textField setTextAlignment:NSTextAlignmentCenter];
+[_textField setBorderStyle:UITextBorderStyleBezel];
+[_textField setClearButtonMode:UITextFieldViewModeWhileEditing];
+[_textField setClearsOnBeginEditing:YES];
+[_textField setKeyboardType:UIKeyboardTypeASCIICapable];
+[_textField setReturnKeyType:UIReturnKeyGoogle];
+[_textField setKeyboardAppearance:UIKeyboardAppearanceDark];
+[_textField setEnablesReturnKeyAutomatically:YES];
+[_textField setSecureTextEntry:YES];
+[_textField setDelegate:self];
 
-@interface ZZCodeSnippetsViewController ()
-@property (nonatomic, strong) MGSFragaria *fragaria;
-@end
+//*******************************************************************
+_switch = [[UISwitch alloc] init];
+[_switch addTarget:self action:@selector(switchValueChanged:) forControlEvents:UIControlEventValueChanged];
+[_switch setOn:NO];
+[_switch setOnImage:[UIImage imageNamed:@"image"]];
+[_switch setOffImage:[UIImage imageNamed:@"image"]];
 
-@implementation ZZCodeSnippetsViewController
+//*******************************************************************
+_pageControl = [[UIPageControl alloc] init];
+[_pageControl addTarget:self action:@selector(pageControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+[_pageControl setNumberOfPages:10];
+[_pageControl setCurrentPage:10];
+[_pageControl setHidesForSinglePage:YES];
+[_pageControl setDefersCurrentPageDisplay:YES];
+[_pageControl setPageIndicatorTintColor:[UIColor clearColor]];
+[_pageControl setCurrentPageIndicatorTintColor:[UIColor clearColor]];
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
-    [self.fragaria embedInView:self.view];
-    NSString *snippetsPath =  [[NSBundle mainBundle]pathForResource:@"helper.snippets" ofType:nil];
-    NSString *snippetsStr = [NSString stringWithContentsOfFile:snippetsPath encoding:NSUTF8StringEncoding error:nil];
-    [self.fragaria setString:snippetsStr];
-    self.fragaria.textView.editable = NO;
-}
-#pragma mark - # Getter
-- (MGSFragaria *)fragaria
-{
-    if (!_fragaria) {
-        _fragaria = [[MGSFragaria alloc] init];
-        [_fragaria setObject:@"Objective-C" forKey:MGSFOSyntaxDefinitionName];
-    }
-    return _fragaria;
-}
-@end
-//
-//  ZZCodeSnippetsViewController.m
-//  ZZUIHelper
-//
-//  Created by 马俊良 on 2017/12/5.
-//  Copyright © 2017年 李伯坤. All rights reserved.
-//
+//*******************************************************************
+_activityIndicatorView = [[UIActivityIndicatorView alloc] init];
+[_activityIndicatorView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+[_activityIndicatorView setColor:[UIColor clearColor]];
+[_activityIndicatorView setHidesWhenStopped:YES];
 
-#import "ZZCodeSnippetsViewController.h"
-#import <MGSFragaria/MGSFragaria.h>
+_slider = [[UISlider alloc] init];
+[_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+[_slider setValue:10];
+[_slider setMinimumValue:10];
+[_slider setMaximumValue:10];
+[_slider setMinimumValueImage:[UIImage imageNamed:@"10"]];
+[_slider setMaximumValueImage:[UIImage imageNamed:@"image"]];
+[_slider setMinimumTrackTintColor:[UIColor whiteColor]];
+[_slider setMaximumTrackTintColor:[UIColor whiteColor]];
+[_slider setThumbTintColor:[UIColor clearColor]];
 
-@interface ZZCodeSnippetsViewController ()
-@property (nonatomic, strong) MGSFragaria *fragaria;
-@end
+//*******************************************************************
+_control = [[_control alloc] init];
+[_control setEnabled:NO];
+[_control setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
+[_control setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
 
-@implementation ZZCodeSnippetsViewController
+//*******************************************************************
+_progressView = [[UIProgressView alloc] init];
+[_progressView setProgress:10];
+[_progressView setProgressTintColor:[UIColor w]];
+[_progressView setTrackTintColor:[UIColor g]];
+[_progressView setProgressImage:[UIImage imageNamed:@"10"]];
+[_progressView setTrackImage:[UIImage imageNamed:@"image"]];
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
-    [self.fragaria embedInView:self.view];
-    NSString *snippetsPath =  [[NSBundle mainBundle]pathForResource:@"helper.snippets" ofType:nil];
-    NSString *snippetsStr = [NSString stringWithContentsOfFile:snippetsPath encoding:NSUTF8StringEncoding error:nil];
-    [self.fragaria setString:snippetsStr];
-    self.fragaria.textView.editable = NO;
-}
-#pragma mark - # Getter
-- (MGSFragaria *)fragaria
-{
-    if (!_fragaria) {
-        _fragaria = [[MGSFragaria alloc] init];
-        [_fragaria setObject:@"Objective-C" forKey:MGSFOSyntaxDefinitionName];
-    }
-    return _fragaria;
-}
-@end
-//
-//  ZZCodeSnippetsViewController.m
-//  ZZUIHelper
-//
-//  Created by 马俊良 on 2017/12/5.
-//  Copyright © 2017年 李伯坤. All rights reserved.
-//
+//*******************************************************************
+_collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.collectionViewFlowLayout];
+[_collectionView setBackgroundColor:[UIColor whiteColor]];
+[_collectionView setDelegate:self];
+[_collectionView setAllowsSelection:NO];
+[_collectionView setAllowsMultipleSelection:YES];
+[_collectionView setDataSource:self];
 
-#import "ZZCodeSnippetsViewController.h"
-#import <MGSFragaria/MGSFragaria.h>
+//*******************************************************************
+_collectionViewFlowLayout = [[UICollectionViewFlowLayout alloc] init];
+[_collectionViewFlowLayout setMinimumLineSpacing:10];
+[_collectionViewFlowLayout setMinimumInteritemSpacing:10];
+[_collectionViewFlowLayout setItemSize:CGSizeMake(10, 0)];
+[_collectionViewFlowLayout setHeaderReferenceSize:CGSizeMake(10, 0)];
+[_collectionViewFlowLayout setFooterReferenceSize:CGSizeMake(10, 0)];
+[_collectionViewFlowLayout setSectionInset:UIEdgeInsetsMake(10, 0, 10, 0)];
 
-@interface ZZCodeSnippetsViewController ()
-@property (nonatomic, strong) MGSFragaria *fragaria;
-@end
+//*******************************************************************
+_tableView = [[UITableView alloc] init];
+[_tableView setDelegate:self];
+[_tableView setRowHeight:10];
+[_tableView setSectionHeaderHeight:10];
+[_tableView setSectionFooterHeight:10];
+[_tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+[_tableView setSeparatorInset:UIEdgeInsetsMake(10, 0, 0, 0)];
+[_tableView setAllowsSelection:NO];
+[_tableView setAllowsMultipleSelection:YES];
+[_tableView setEditing:YES];
+[_tableView setDataSource:self];
 
-@implementation ZZCodeSnippetsViewController
+//*******************************************************************
+_scrollView = [[UIScrollView alloc] init];
+[_scrollView setScrollEnabled:NO];
+[_scrollView setPagingEnabled:YES];
+[_scrollView setScrollsToTop:NO];
+[_scrollView setBounces:NO];
+[_scrollView setAlwaysBounceVertical:NO];
+[_scrollView setAlwaysBounceHorizontal:NO];
+[_scrollView setShowsVerticalScrollIndicator:YES];
+[_scrollView setShowsHorizontalScrollIndicator:YES];
+[_scrollView setDelegate:self];
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
-    [self.fragaria embedInView:self.view];
-    NSString *snippetsPath =  [[NSBundle mainBundle]pathForResource:@"helper.snippets" ofType:nil];
-    NSString *snippetsStr = [NSString stringWithContentsOfFile:snippetsPath encoding:NSUTF8StringEncoding error:nil];
-    [self.fragaria setString:snippetsStr];
-    self.fragaria.textView.editable = NO;
-}
-#pragma mark - # Getter
-- (MGSFragaria *)fragaria
-{
-    if (!_fragaria) {
-        _fragaria = [[MGSFragaria alloc] init];
-        [_fragaria setObject:@"Objective-C" forKey:MGSFOSyntaxDefinitionName];
-    }
-    return _fragaria;
-}
-@end
+//*******************************************************************
+_scrollView = [[UIScrollView alloc] init];
+[_view.layer setShadowRadius:1];
+[_view.layer setShadowColor:[UIColor orangeColor].CGColor];
+[_view.layer setMasksToBounds:YES];
+[_view.layer setCornerRadius:10];
+[_view.layer setBorderWidth:10];
+[_view.layer setBorderColor:[UIColor whiteColor].CGColor];
+[_view.layer setZPosition:10];
+[_view.layer setAnchorPoint:CGPointMake(1, 0)];
+[_view.layer setContentsScale:2];
+[_view setFrame:CGRectMake(10, 0, 0, 0)];
+[_view setContentMode:UIViewContentModeScaleAspectFit];
+[_view setTag:10];
+[_view setUserInteractionEnabled:NO];
+[_view setMultipleTouchEnabled:YES];
+[_view setAlpha:10];
+[_view setBackgroundColor:[UIColor whiteColor]];
+[_view setTintColor:[UIColor whiteColor]];
+[_view setOpaque:NO];
+[_view setHidden:YES];
+[_view setClipsToBounds:YES];
+
+
+

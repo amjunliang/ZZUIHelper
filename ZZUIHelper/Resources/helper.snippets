@@ -2,14 +2,17 @@
 nsobject
 	uiresponder
 		uiview
-			uiscrollView
+
+                uiscrollView
 				uitextView
 				uitableView
 				uicollectionView
+
 			UILabel
 			uiprogressview
 			uiimageview
 			UIControl
+
 				uitextfield
 				uibutton
 				uislider
@@ -164,7 +167,6 @@ _scrollView = [[UIScrollView alloc] init];
 [_scrollView setDelegate:self];
 
 //*******************************************************************
-_scrollView = [[UIScrollView alloc] init];
 [_view.layer setShadowRadius:1];
 [_view.layer setShadowColor:[UIColor orangeColor].CGColor];
 [_view.layer setMasksToBounds:YES];
@@ -174,6 +176,7 @@ _scrollView = [[UIScrollView alloc] init];
 [_view.layer setZPosition:10];
 [_view.layer setAnchorPoint:CGPointMake(1, 0)];
 [_view.layer setContentsScale:2];
+
 [_view setFrame:CGRectMake(10, 0, 0, 0)];
 [_view setContentMode:UIViewContentModeScaleAspectFit];
 [_view setTag:10];

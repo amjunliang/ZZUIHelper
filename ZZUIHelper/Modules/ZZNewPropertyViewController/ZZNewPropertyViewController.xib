@@ -30,7 +30,7 @@
                     </constraints>
                     <buttonCell key="cell" type="push" title="确定" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TSe-jE-CjZ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <font key="font" size="16" name=".PingFangSC-Regular"/>
                     </buttonCell>
                     <connections>
                         <action selector="okButtonClick:" target="-2" id="VyS-QX-GBZ"/>
@@ -44,8 +44,8 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JMZ-gp-1FW">
-                    <rect key="frame" x="100" y="128" width="196" height="24"/>
+                <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMZ-gp-1FW">
+                    <rect key="frame" x="97" y="128" width="196" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="NCV-Th-iLA">
                         <font key="font" metaFont="system" size="16"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -87,7 +87,7 @@
                     </constraints>
                     <buttonCell key="cell" type="push" title="取消" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="v0q-73-NAC">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <font key="font" size="16" name=".PingFangSC-Regular"/>
                         <connections>
                             <action selector="cancelButtonClick:" target="-2" id="B2C-wb-OX6"/>
                         </connections>
@@ -159,7 +159,7 @@
                 <constraint firstItem="d2x-k6-ZX0" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="zXF-cR-FRt"/>
                 <constraint firstAttribute="bottom" secondItem="oMI-bt-ohV" secondAttribute="bottom" constant="30" id="zjv-wr-7Ux"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="110"/>
+            <point key="canvasLocation" x="182" y="136"/>
         </customView>
     </objects>
 </document>
